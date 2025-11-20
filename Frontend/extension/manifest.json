@@ -1,0 +1,21 @@
+{
+  "name": "Job Scam Detector",
+  "description": "Scans opened emails for job scam indicators using your local AI model.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "http://127.0.0.1:5000/*",
+    "*://mail.google.com/*"
+  ],
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["*://mail.google.com/*"],
+      "css": ["content.css"]
+    }
+  ],
+  "action": {
+    "default_title": "Job Scam Detector"
+  }
+}

@@ -1,0 +1,50 @@
+/* Style for the "Scan for Scam" button */
+.job-scan-button {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: #D32F2F; /* Red color for caution/scan */
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 13px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    line-height: 1.5;
+    transition: background-color 0.2s;
+}
+
+.job-scan-button:hover {
+    background-color: #B71C1C;
+}
+
+.job-scan-button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+}
+
+/* Style for the alert banner that shows the result */
+.scan-alert-banner {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Roboto', Arial, sans-serif;
+    display: none; /* Hidden by default */
+}
+
+.scan-alert-banner.fake {
+    background-color: #FFEBEE; /* Light red background */
+    color: #D32F2F; /* Dark red text */
+    border: 1px solid #D32F2F;
+}
+
+.scan-alert-banner.real {
+    background-color: #E8F5E9; /* Light green background */
+    color: #2E7D32; /* Dark green text */
+    border: 1px solid #2E7D32;
+}
